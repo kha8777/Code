@@ -1,0 +1,266 @@
+/* general elements */
+* {    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+/* addition elements */
+
+#up-to-top {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* header */
+.header {
+    min-height: 42px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 50px 0;
+    box-shadow: 0px 5px 5px 0px grey;
+}
+
+.header-list {
+    margin: auto 16px;
+}
+
+.header-item {
+    color: orangered;
+    display: inline-block;
+    list-style: none;
+    margin: 0 8px;
+    cursor: pointer;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.header-item:hover{
+    color: red;
+}
+
+/* form layout */
+.form-container {
+    max-width: 720px;
+    padding: 32px;
+    margin: 90px auto 0 auto;
+    background-color: rgb(202, 202, 202);
+    border-radius: 3px;
+}
+
+.form-row {
+    padding: 8px 0;
+    display: flex;
+}
+
+.form-label {
+    min-width: 70px;
+    margin-top: 4px;
+}
+
+.form-input {
+    flex: 1;
+    margin-left: 25px;
+    border-radius: 5px;
+    min-height: 20px;
+}
+
+.forget-pass-box {
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.forget-pass-item {
+    margin-left: 43vw;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.forget-pass-item:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+/* column layout */
+.column-container {
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+}
+
+.column-box {
+    padding: 0 32px;
+}
+
+.box-1 {
+    flex: 1;
+    order: 2;
+}
+
+.box-2 {
+    flex: 3;
+    order: 1;
+}
+
+.box-3 {
+    flex: 1;
+    order: 3;   
+}
+
+/* feature layout */
+.feature-layout {
+    padding: 0 16px 36px;
+    margin-top: 36px;
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* PC */
+@media (min-width: 740px) {
+    .feature-layout {
+        flex-direction: row;
+    }
+}
+
+.feature-box {
+    margin-top: 36px;
+    padding: 0 20px;
+    flex-basis: 28%;
+    border-radius: 15px;
+}
+
+.feature-box:nth-child(1) {
+    background-color: rgb(185, 223, 220);
+}
+
+.feature-box:nth-child(2) {
+    background-color: rgb(222, 192, 184);
+}
+
+.feature-box:nth-child(3) {
+    background-color: rgb(223, 184, 226);
+}
+
+/* wrap layout */
+.wrap-layout {
+    padding: 0 0 36px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.wrap-box {
+    margin-top: 36px;
+    padding: 0 20px;
+    width: 148px;
+    height: 90px;
+    background-color: orangered;
+    text-align: center;
+    line-height: 90px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* center layout */
+.center-layout {
+    background-color: beige;
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    max-width: 640px;
+    height: 360px;
+    display: flex;
+}
+
+.center-item {
+    font-size: 42px;
+    font-weight: 700;
+    margin: auto;
+}
+
+/* chart layout */
+
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-item {
+    width: 60px;
+    color: white;
+    text-align: center;
+    height: var(--percent);
+    background-color: orangered;
+    align-self: flex-end;
+    animation: growth ease-in 0.5s;
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        height: 0%;
+    }
+    
+    to {
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+
+/* end */
+.end {
+    margin: 12px auto 48px auto;
+    padding: 32px 0;
+    max-width: 740px;
+    display: flex;
+}
+
+.end-first {
+    padding: 4px 16px;
+    background-color: azure;
+    flex: 1;
+}
+
+.end-second {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.end-second-one {
+    flex: 1;
+    padding: 4px 16px;
+    background-color: rgb(255, 211, 237);
+}
+
+.end-second-two {
+    flex: 1;
+    padding: 4px 16px;
+    background-color: rgb(203, 226, 255);
+}
