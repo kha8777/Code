@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
-public class Gptb2 extends JFrame implements ActionListener {
+public class Tuan1_1_Gptb2 extends JFrame implements ActionListener {
 	
 	private JButton btnSolve;
 	private JButton btnDel;
@@ -25,7 +25,7 @@ public class Gptb2 extends JFrame implements ActionListener {
 	private JTextField tfC;
 	private JTextField tfAns;
 	
-	public Gptb2() {
+	public Tuan1_1_Gptb2() {
 		setTitle("Giải phương trình bậc 2");
 		setSize(500, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -102,7 +102,7 @@ public class Gptb2 extends JFrame implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
-		new Gptb2().setVisible(true);
+		new Tuan1_1_Gptb2().setVisible(true);
 	}
 
 	@Override

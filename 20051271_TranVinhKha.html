@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function cong() {
+            document.getElementById('kq').value = parseInt(document.getElementById('txta').value) + parseInt(document.getElementById('txtb').value);
+            
+        }
+        function tru() {
+            document.getElementById('kq').value = parseInt(document.getElementById('txta').value) - parseInt(document.getElementById('txtb').value);
+            
+        }
+        function nhan() {
+            document.getElementById('kq').value = parseInt(document.getElementById('txta').value) * parseInt(document.getElementById('txtb').value);
+            
+        }
+        function chia() {
+            document.getElementById('kq').value = parseInt(document.getElementById('txta').value) / parseInt(document.getElementById('txtb').value);
+            if (document.getElementById('txtb').value == 0) {
+                alert('Không thể chia cho 0');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form action="form" id="form">
+        <label for="txta">Nhập a: </label>
+        <input type="number" id="txta" required>
+        <br><br>
+        <label for="txtb">Nhập b: </label>
+        <input type="number" id="txtb" required>
+        <br><br>
+        <label for="">Kết quả</label>
+        <input type="number" id="kq" readonly>
+        <br><br>
+        <input type="button" value="+" onclick="cong()">
+        <input type="button" value="-" onclick="tru()">
+        <input type="button" value="*" onclick="nhan()">
+        <input type="button" value="/" onclick="chia()">
+        
+    </form>
+</body>
+</html>
