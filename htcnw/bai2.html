@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sizeChg() {
+            document.getElementById('anh').style.width = '100%';
+        }
+        
+        function imgChg() {
+            document.getElementById("anh").src = './gg_playpng.png';
+        }
+    </script>
+</head>
+<body>
+    <img id="anh" src="./app_storepng.png" alt="">
+    <br>
+    <input type="button" value="change image" onclick="imgChg()">
+    <br>
+    <input type="button" value="change size" onclick="sizeChg()">
+</body>
+</html>
