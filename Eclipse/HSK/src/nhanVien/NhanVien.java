@@ -1,14 +1,16 @@
 package nhanVien;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class NhanVien {
+@SuppressWarnings("serial")
+public class NhanVien implements Serializable {
 	private String maNV;
 	private String ho;
 	private String ten;
 	private String phai;
-	private int tuoi;
-	private double tienLuong;
+	private String tuoi;
+	private String tienLuong;
 	
 	public String getMaNV() {
 		return maNV;
@@ -42,19 +44,19 @@ public class NhanVien {
 		this.phai = phai;
 	}
 	
-	public int getTuoi() {
+	public String getTuoi() {
 		return tuoi;
 	}
 	
-	public void setTuoi(int tuoi) {
+	public void setTuoi(String tuoi) {
 		this.tuoi = tuoi;
 	}
 	
-	public double getTienLuong() {
+	public String getTienLuong() {
 		return tienLuong;
 	}
 	
-	public void setTienLuong(double tienLuong) {
+	public void setTienLuong(String tienLuong) {
 		this.tienLuong = tienLuong;
 	}
 
@@ -73,7 +75,7 @@ public class NhanVien {
 		this.maNV = maNV;
 	}
 	
-	public NhanVien(String maNV, String ho, String ten, String phai, int tuoi, double tienLuong) {
+	public NhanVien(String maNV, String ho, String ten, String phai, String tuoi, String tienLuong) {
 		super();
 		this.maNV = maNV;
 		this.ho = ho;
@@ -99,7 +101,5 @@ public class NhanVien {
 		NhanVien other = (NhanVien) obj;
 		return Objects.equals(maNV, other.maNV);
 	}
-	
-	
-	
+
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #animated {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 0px;
+            top: 100px;
+            background-color: #ffcc00;
+        }
+
+        @-webkit-keyframes scroll {
+            to {
+                left: 100%;
+                -webkit-transform: rotate(180deg);
+            }
+        }
+
+        @-moz-keyframes scroll {
+            to {
+                left: 100%;
+                -moz-transform: rotate(180deg);
+            }
+        }
+
+        @-o-keyframes scroll {
+            to {
+                left: 100%;
+                -o-transform: rotate(180deg);
+            }
+        }
+
+        @keyframes scroll {
+            to {
+                left: 100%;
+                transform: rotate(180deg);
+            }
+        }
+
+        div {
+            /* animation-name: scroll; */
+            /* animation-duration: 5s; */
+            /* animation-iteration-count: infinite; */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-direction: alternate; */
+            animation: scroll 5s ease-in-out infinite alternate;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="animated"></div>
+</body>
+</html>
