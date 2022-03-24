@@ -1,0 +1,199 @@
+* {
+    --primary-color: #092F84;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.p1on3 {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.p2on3 {
+    width: 80%;
+    margin-left: 8px;
+}
+
+.gamezone__img {
+    width: 290px;
+}
+
+.gamezone__box {
+    background-color: var(--primary-color);
+    width: 288px;
+    margin-left: 1px;
+}
+
+.current-game__title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: white;
+    padding: 0 25px;
+    line-height: 20px;
+    margin: 0;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.gamezone__list {
+    margin: 0 4px 4px 4px;
+    padding: 0;
+    border: 1px solid #6B82B5;
+    list-style: none;
+}
+
+.gamezone__item {
+    border: 1px solid #3B598C;
+    margin: 4px;
+    background-color: #01285F;
+    min-height: 20px;
+}
+
+.gamezone__link {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding-left: 4px;
+}
+
+.gamezone__item:last-child {
+    display: block;
+}
+
+.gamezone__item:last-child .gamezone__link {
+    text-decoration: underline;
+    display: block;
+    position: relative;
+    left: 180px;
+}
+
+.body__block-start,
+.body__block-end {
+    height: 16px;
+    background-color: #656565;
+}
+
+.nav-bar__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 0 0;
+}
+
+.nav-bar__item {
+    width: 100%;
+    background-color: #1A5FAD;
+    border-right: 1px solid white;
+    border-bottom: 4px solid #053F89;
+    position: relative;
+}
+
+.nav-bar__item::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #B4B4B4;
+    bottom: -8px;
+    left: 0;
+}
+
+.nav-bar__item:last-child {
+    border-right: none;
+}
+
+.nav-bar__item a {
+    text-decoration: none;
+    background-color: #1A5FAD;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+.table {
+    margin-top: 12px;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.table__header {
+    background-color: #003399;
+    text-align: center;
+}
+
+.table__header-title {
+    padding: 8px 0;
+    color: white;
+}
+
+.table__header-title,
+.table__collumn {
+    border: 1px solid #ddd;
+}
+
+.table__row {
+
+}
+
+.table__collumn {
+    padding: 8px 4px;
+}
+
+.table__collumn, 
+.table__collumn a {
+    color: #1A5FAD;
+}
+
+.page__nav {
+    background-color: #99CCCC;
+    width: 77px;
+    height: 32px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.page__nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.page__nav-item {
+
+}
+
+.page__nav-item a {
+    text-decoration: none;
+    color: #1A5FAD;
+    margin-left: 6px;
+}
+
+.page__nav-item--active {
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body__block-end {
+    margin-top: 8px;
+    width: 60%;
+}
+
+.copyright {
+    color: #999;
+}

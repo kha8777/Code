@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery__list {
+            list-style: none;
+            display: flex;
+        }
+
+        .gallery__item {
+            border: 1px solid #333;
+            margin: 12px;
+            padding: 12px;
+        }
+        
+        .img {
+            height: 60px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .img:hover {
+            transform: scale(1.2, 1.2);
+            transition: all .5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="gallery__list">
+        <li class="gallery__item">
+            <img class="img" src="./img/200w.gif" alt="">
+            <p class="description">Description 1</p>
+        </li>
+        <li class="gallery__item">
+            <img class="img" src="./img/cute.gif" alt="">
+            <p class="description">Description 2</p>
+        </li>
+        <li class="gallery__item">
+            <img class="img" src="./img/giphy.gif" alt="">
+            <p class="description">Description 3</p>
+        </li>
+    </ul>
+</body>
+
+</html>

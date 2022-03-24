@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 20</title>
+    <style>
+        nav {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            
+        }
+
+        li {
+            width: 100px;
+            margin: 5px;
+            padding: 5px;
+            list-style-type: none;
+            margin-right: 10px;
+            font-size: 25px;
+            background-color: #0d90df;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.3em;
+            border: 2px dashed #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 0 4px #0d90df, 2px 1px 6px 4px rgba(10, 10, 0, 0.5) ;
+            text-shadow: -1px -1px #aa3030;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        a:link {
+            color:rgb(48, 14, 201);
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: aquamarine;
+            text-decoration: none;
+        }
+
+        li > ul {
+            display: none;
+            
+        }
+        li:hover ul {
+            display: block;
+            position: absolute;
+            left:180px;
+            background-color: gray;
+            margin: -20px;
+        }
+
+        li:hover ul li a:link {
+        display: block; 
+        margin-left: 30px;  
+        color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Introdution</a></li>
+            <li><a href="#">Portfolio</a>
+                 <ul>
+                    <li><a href="#">Photography</a></li>
+                    <li><a href="#">Web & User interface Design</a></li>
+                    <li><a href="#">lllustration</a></li>
+                 </ul>
+            </li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

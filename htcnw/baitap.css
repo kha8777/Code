@@ -1,0 +1,54 @@
+* {
+    --primary-color: rgb(43, 35, 25);
+}
+
+.btn {
+    padding: 5px;
+    color: white;
+    background-color: var(--primary-color);
+    min-width: 120px;
+    max-width: 120px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    display: none;
+}
+
+.taikhoan,
+.matkhau {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.taikhoan label,
+.matkhau label {
+    width: 90px;
+    min-width: 90px;
+}
+
+.taikhoan input,
+.matkhau input {
+    line-height: 20px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+}
+
+.submit {
+    margin-top: 15px;
+    position: relative;
+    left: 180px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 14px;
+    font-weight: 700;
+}

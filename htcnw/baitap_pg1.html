@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./baitap.css">
+    <script>
+
+        $(document).ready(function() {
+            $(".tfMk").focus(function() {
+                $(this).css("background-color", "var(--primary-color)");
+            })
+
+            $(".tfMk").blur(function() {
+                $(this).css("background-color", "white");
+            })
+        })
+
+        $(document).ready(function() {
+            $(".tfTk").focus(function() {
+                $(this).css("background-color", "var(--primary-color)");
+            })
+            
+            $(".tfTk").blur(function() {
+                if (document.getElementById('tfTk').value == "") {
+                    alert("Bạn chưa nhập dữ liệu");
+                }
+                $(this).css("background-color", "white");
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="form">
+        <div class="taikhoan">
+            <label class="lblTaiKhoan" for="#tfTk">Tài khoản: </label>
+            <input id="tfTk" class="tfTk" type="text">
+        </div>
+
+        <div class="matkhau">
+            <label class="lblMatKhau" for="#tfMk">Mật khẩu: </label>
+            <input id="tfMk" class="tfMk" type="password">
+        </div>
+        
+        <input class="submit" type="submit" value="Submit">
+    </form>
+</body>
+</html>
