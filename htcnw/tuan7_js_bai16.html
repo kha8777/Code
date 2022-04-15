@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            margin: 0 auto;
+            box-shadow: 0 0 5px 0 #333;
+            width: 600px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        
+        table {
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+
+        td {
+            padding: 8px 0;
+        }
+
+        td:first-child {
+            text-align: end;
+        }
+
+        td:nth-child(2) {
+            float: left;
+        }
+
+        input {
+            width: 400px;
+        }
+
+        span {
+            color: red;
+        }
+
+        .btngr button {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="form">
+        <h2 style="text-align: center; margin-top: 20px; padding-top: 8px;">ĐĂNG KÝ TÀI KHOẢN</h2>
+        <table>
+            <tr>
+                <td>Tên đăng nhập:&nbsp</td>
+                <td><input id="username" type="text" placeholder="Nhập vào tên đăng nhập" required><span>&nbsp*</span></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:&nbsp</td>
+                <td><input id="password" type="text" placeholder="Nhập vào mật khẩu" required><span>&nbsp*</span></td>
+            </tr>
+            <tr>
+                <td>Nhập lại mật khẩu:&nbsp</td>
+                <td><input id="retypepassword" type="text" placeholder="Nhập vào xác nhận mật khẩu" required><span>&nbsp*</span></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <h4>THÔNG TIN CÁ NHÂN</h4>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>Họ và tên:&nbsp</td>
+                <td><input id="name" type="text" placeholder="Nhập vào họ tên (bắt buộc nhập)" required><span>&nbsp*</span></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh:&nbsp</td>
+                <td><input id="birthday" type="date" style="width: 100px"></td>
+            </tr>
+            <tr>
+                <td>Giới tính:&nbsp</td>
+                <td>
+                    <input style="width: 20px" id="rb1" type="radio" name="gt"> Nam
+                    <input style="width: 20px" id="rb1" type="radio" name="gt"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ:&nbsp</td>
+                <td><input id="address" type="text" placeholder="Nhập vào địa chỉ"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại:&nbsp</td>
+                <td><input id="phonenumber" type="text" placeholder="Nhập vào số điện thoại (9-10 số)"></td>
+            </tr>
+            <tr>
+                <td>Email:&nbsp</td>
+                <td><input id="email" type="text" placeholder="Nhập vào email cá nhân theo dạng ten@tencongty.tenmien"></td>
+            </tr>
+        </table>
+        <div class="btngr">
+            <button onclick="check()">Đăng ký</button>
+            <button>Hủy</button>
+
+        </div>
+    </form>
+    <script>
+        function check() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var retypepassword = document.getElementById('retypepassword').value;
+            var name = document.getElementById('name').value;
+            var birthday = document.getElementById('birthday').value;
+            var phonenumber = document.getElementById('phonenumber').value;
+            var email = document.getElementById('email').value;
+            var usernameexp = /^\w{6,12}$/; //ten tai khoan phai tu 6 den 12 ky tu
+            var passwordexp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/; //mat khau phai chua it nhat 8 ky tu, trong do it nhat mot ky tu thuong, mot ky tu hoa va so
+            var nameexp = /^[a-zA-Z]+$/; //ten phai la chu
+            var phonenumberexp = /^[0-9]{9,10}$/; //so dien thoai phai la so va tu 9 den 10 ky tu so
+            var emailexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //email phai co dang ten@tencongty.tenmien
+            
+            if (!usernameexp.test(username)) {
+                alert('ten tai khoan phai tu 6 den 12 ky tu');
+                return false;
+            }
+            if (!passwordexp.test(password)) {
+                alert('mat khau phai chua it nhat 8 ky tu, trong do it nhat mot ky tu thuong, mot ky tu hoa va so');
+                return false;
+            }
+            if (!nameexp.test(name)) {
+                alert('ten phai la chu');
+                return false;
+            }
+            if (!phonenumberexp.test(phonenumber)) {
+                alert('so dien thoai phai la so va tu 9 den 10 ky tu so');
+                return false;
+            }
+            if (!emailexp.test(email)) {
+                alert('email phai co dang ten@tencongty.tenmien');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

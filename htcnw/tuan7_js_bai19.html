@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="width: 50%; margin: 40px auto; padding: 20px; box-shadow: 0 0 15px 0 #333;">
+    <table>
+        <tr>
+            <td>Họ tên:</td>
+            <td><input id="name" type="text"></td>
+        </tr>
+        <tr>
+            <td>Lớp:</td>
+            <td>
+                <select name="" id="">
+                    <option id="lop" value="Đại học kỹ thuật phần mềm 9A">Đại học kỹ thuật phần mềm 9A</option>
+                </select>    
+            </td>
+        </tr>
+        <tr>
+            <td>Môn học:</td>
+            <td>
+                <select name="" id="">
+                    <option id="mon" value="Lập trình hướng đối tượng">Lập trình hướng đối tượng</option>
+                </select>        
+            </td>
+        </tr>
+        <tr>
+            <td>Loại:</td>
+            <td>
+                <input type="radio" name="loai" value="Lý thuyết">Lý thuyết
+                <input type="radio" name="loai" value="Thực hành">Thực hành
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="check()">Đăng ký</button>
+    <br>
+    <br>
+    <table id="table" border="1px solid #333" style="width: 600px">
+        <tr>
+            <th>Họ tên</th>
+            <th>Lớp</th>
+            <th>Môn đăng ký</th>
+            <th>Loại</th>
+        </tr>
+    </table>
+    <script>
+        function check() {
+            var name = document.getElementById('name').value;
+            if (name == "") {
+                alert("Tên không được để trống");
+                return false;
+            }
+            if (!(name.match(/^[a-zA-Z\sÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰYÝỲỶỸỴĐáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ]+$/))) {
+                alert("Tên chỉ được chứa chữ");
+                return false;
+            }
+            if (uncheck()) {
+                alert("Vui lòng chọn lý thuyết hoặc thực hành");
+                return false;
+            }
+            them();
+        }
+
+        function uncheck() {
+            var checkbox = document.getElementsByName("loai");
+            for (var i = 0; i < checkbox.length; i++){
+                if (checkbox[i].checked == true){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function them(){
+            var table = document.getElementById("table");
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var name = document.getElementById('name').value;
+            var lop = document.getElementById('lop').value;
+            var mon = document.getElementById('mon').value;
+            var loai = "";
+            var checkbox = document.getElementsByName("loai");
+            for (var i = 0; i < checkbox.length; i++){
+                if (checkbox[i].checked === true){
+                    loai = checkbox[i].value;
+                }
+            }
+            cell1.innerHTML = name;
+            cell2.innerHTML = lop;
+            cell3.innerHTML = mon;
+            cell4.innerHTML = loai;
+        }
+    </script>
+</body>
+</html>

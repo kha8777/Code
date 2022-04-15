@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="JavaScript">
+        var charNum = 0;
+        function KiemTra()
+        {
+            if (document.getElementById('txtContent').value.length > 200)
+            alert("Bạn đã gõ quá số ký tự cho phép !");
+            document.getElementById('txtCharNum').value = document.getElementById('txtContent').value.length;
+        }
+    </script>
+    Số ký tự đã gõ: <input type="text" name="txtCharNum" id="txtCharNum">
+    <textarea id="txtContent" name="txtContent" cols=50 rows="10" onKeyUp="KiemTra();"> </textarea>
+</body>
+</html>

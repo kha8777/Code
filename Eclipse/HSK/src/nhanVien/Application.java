@@ -101,7 +101,6 @@ public class Application extends JFrame implements ActionListener, MouseListener
 	    b2.add(txtHo);
 	    b2.add(lbTen);
 	    b2.add(txtTen);
-	    lbHo.setPreferredSize(lbManv.getPreferredSize());
 	    
 	    txtTuoi = new JTextField();
 	    radNam = new JRadioButton("Nam", true);
@@ -119,6 +118,7 @@ public class Application extends JFrame implements ActionListener, MouseListener
 	    b4.add(lbTienLuong);
 	    b4.add(txtTienLuong);
 	  
+	    lbHo.setPreferredSize(lbManv.getPreferredSize());
 	    lbTuoi.setPreferredSize(lbManv.getPreferredSize());
 	    lbPhai.setPreferredSize(lbManv.getPreferredSize());
 	    lbTienLuong.setPreferredSize(lbManv.getPreferredSize());
@@ -434,8 +434,7 @@ public class Application extends JFrame implements ActionListener, MouseListener
 			e.printStackTrace();
 		}
 		xoaTrangTable();
-		for (int i = 0; i < ls.getSize(); i++) {
-			NhanVien nv = ls.getElement(i);
+		for (NhanVien nv: ls.getList()) {
 			model.addRow(new Object[] {
 					nv.getMaNV(),
 					nv.getHo(), 

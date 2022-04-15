@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var imgSlider;
+        function start() {
+            var imgArr = [];
+            imgArr[0] = "./img/hoa1.jpg"
+            imgArr[1] = "./img/hoa2.jpg"
+            imgArr[2] = "./img/hoa3.jpg"
+            var i = Math.floor(Math.random() * imgArr.length);
+            img.src = imgArr[i];
+            imgSlider = setTimeout("start()", 500);
+        }
+
+        function stop() {
+            clearTimeout(imgSlider);
+        }
+    </script>
+</head>
+<body>
+    <img id="img" src="./img/hoa1.jpg" alt="">
+    <br>
+    <input type="button" value="Start" onclick="start()">
+    <input type="button" value="Stop" onclick="stop()">
+</body>
+</html>

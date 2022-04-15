@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 320px;
+        }
+
+        .screen {
+            margin: 8px;
+        }
+        
+        .screen input {
+            height: 80px;
+            width: 100%;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .keyrow .button {
+            width:50px;
+            height:50px;
+            margin: 15px;
+            float: left;
+            border-radius: 50%;
+            border-width: 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+    </style>
+
+    <script>
+        var x = '';
+        function getId(id) {
+            return document.getElementById(id);
+        }
+
+        function set_num(num) {
+            x += num;
+            getId('kq').value = x;  
+        }
+
+        function xoa() {
+            x = '0';
+            getId('kq').value = x;
+            x = '';
+        }
+
+        function ketqua() {
+            getId('kq').value = eval(getId('kq').value);
+            x= '';
+        }
+    </script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="screen">
+            <input id="kq" type="text" value="0">
+        </div>
+        <div class="keyboard">
+            <div class="keyrow">
+                <input class="button" type="button" value="%" onclick="set_num(this.value)">
+                <input class="button" type="button" value="(" onclick="set_num(this.value)">
+                <input class="button" type="button" value=")" onclick="set_num(this.value)">
+                <input class="button" type="button" value="C" onclick="xoa()">
+            </div>
+            <div class="keyrow">
+                <input class="button" type="button" value="7" onclick="set_num(this.value)">
+                <input class="button" type="button" value="8" onclick="set_num(this.value)">
+                <input class="button" type="button" value="9" onclick="set_num(this.value)">
+                <input class="button" type="button" value="/" onclick="set_num(this.value)">
+            </div>
+            <div class="keyrow">
+                <input class="button" type="button" value="4" onclick="set_num(this.value)">
+                <input class="button" type="button" value="5" onclick="set_num(this.value)">
+                <input class="button" type="button" value="6" onclick="set_num(this.value)">
+                <input class="button" type="button" value="*" onclick="set_num(this.value)">
+            </div>
+            <div class="keyrow">
+                <input class="button" type="button" value="1" onclick="set_num(this.value)">
+                <input class="button" type="button" value="2" onclick="set_num(this.value)">
+                <input class="button" type="button" value="3" onclick="set_num(this.value)">
+                <input class="button" type="button" value="-" onclick="set_num(this.value)">
+            </div>
+            <div class="keyrow">
+                <input class="button" type="button" value="0" onclick="set_num(this.value)">
+                <input class="button" type="button" value="." onclick="set_num(this.value)">
+                <input class="button" type="button" value="=" onclick="ketqua()">
+                <input class="button" type="button" value="+" onclick="set_num(this.value)">
+            </div>
+            <div class="keyrow">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

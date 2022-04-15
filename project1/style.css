@@ -1,0 +1,102 @@
+* {
+    list-style: none;
+    padding-left: 0;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(1, 1, 77);
+}
+
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-1__cssk {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 12px;
+}
+
+.nav-bar__list {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.nav-bar__item {
+    padding: 8px 12px;
+    border-radius: 50px;
+    margin: 0 12px;
+}
+
+.nav-bar__item--active:hover {
+    background-color: #999;
+}
+
+.nav-bar__item--active {
+    border: 1px solid #333;
+
+}
+
+.nav-bar__item a {
+    text-decoration: none;
+    color: white;
+}
+
+.sub-nav {
+    background-color: red;
+    padding: 12px;
+}
+
+.main {
+    width: 100vw;
+    height: 120px;
+    display: flex;
+}
+
+.main-left {
+    width: 60%;
+}
+
+.main-right {
+    width: 40%;
+}
+
+.main-left__contain p img {
+    border: 3px solid #333;
+    border-radius: 50px;
+}
+
+.main-left-2 {
+    border-radius: 10px;
+    background-color: blue;
+    padding: 12px 40px;
+}
+
+.main-left-2__header {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 4px solid white;
+    text-shadow: 1px 1px 1px #333;
+}
+
+.main-left__nd__header,
+.main-left__nd__main {
+    text-align: center;
+}
+
+.main-left__nd__header {
+    font-weight: bold;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+}

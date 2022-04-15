@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: rgb(57, 58, 145);
+        }
+        
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 0 4px;
+        }
+
+        .header__title{
+            width: 60%;
+            margin-left: 12px;
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 36px;
+        }
+
+        .header__login-username, .header__login-password {
+            width: 15%;
+        }
+
+        .header__login-username label, .header__login-password label {
+            font-size: 14px;
+        }
+
+        .header__login-username span, .header__login-password a {
+            color: #bbb;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .header__login-username input, .header__login-password input {
+            margin: 4px 0;
+        }
+
+        .checkbox {
+            margin: 0 !important;
+        }
+
+        .header__login-submit {
+            margin-top: 4px;
+        }
+
+        .header__login-submit input {
+            background-color: rgb(107, 109, 170);
+            color: white;
+            border: 1px solid;
+            border-color: rgb(145, 147, 223) rgb(145, 147, 223) rgb(40, 42, 116) rgb(40, 42, 116);
+        }
+
+        .center {
+            display: flex;
+            background-color: rgb(231, 235, 248);
+        }
+        .center__img {
+            width: 40%;
+            display: block;
+        }
+
+        .center__img img {
+            width: 50%;
+        }
+
+        .center__img h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: rgb(92, 123, 226);
+            margin: 40px 0 0 20px; 
+        }
+
+        .center__img h4 {
+            margin: 40px 10px;
+            font-weight: 700;
+        }
+
+        .center__form form {
+            margin: 40px 0 0 140px;
+        }
+
+        .center__form form input{
+            margin: 8px 0;
+            height: 34px;
+            border-radius: 5px;
+            border: 2px solid #333;
+        }
+        .row1 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .row2 {
+            margin: 10px 0;
+        }
+        .row3, .row4, .row9 {
+            width: 180px;
+        }
+        .row5, .row6, .row7, .row8 {
+            width: 380px;
+        }
+        .row9 {
+            background-color: rgb(32, 192, 139);
+            color: #fff;
+            text-shadow: 0 -1px 5px black;
+        }
+
+    </style>
+    <script>
+        function ktHo(){
+            let ho=document.getElementById("txtHo").value
+            let errorName=document.getElementById("errorName")
+            let pattern=/^[A-Z]+/
+            if(ho.trim()==""){
+                errorName.innerHTML="Họ Bắt Buộc Nhập"
+                return false
+            }
+            if(!pattern.test(ho)){
+                errorName.innerHTML="Vui Lòng Nhập Đúng Định Dạng"
+                return false
+            }
+            errorName.innerHTML=""
+            return true
+        }
+        function ktTen(){
+            let ten=document.getElementById("txtName").value
+            let errorName=document.getElementById("errorName")
+            let pattern=/^[A-Z]+/
+            if(ten.trim()==""){
+                errorName.innerHTML="Tên Bắt Buộc Nhập"
+                return false
+            }
+            if(!pattern.test(ten)){
+                errorName.innerHTML="Vui Lòng Nhập Đúng Định Dạng"
+                return false
+            }
+            errorName.innerHTML=""
+            return true
+        }
+        function ktEmail(){
+            let email=document.getElementById("txtEmail").value
+            let errorEmail=document.getElementById("errorEmail")
+            let pattern=/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+            if(email.trim()==""){
+                errorEmail.innerHTML="Email Bắt Buộc Nhập"
+                return false
+            }
+            if(!pattern.test(email)){
+                errorEmail.innerHTML="Email không đúng định dạng"
+                return false
+            }
+            errorEmail.innerHTML=""
+            return true
+        }
+        function ktEmailAgain(){
+            let emailAgain=document.getElementById("txtEmailAgain").value
+            let email=document.getElementById("txtEmail").value
+            let errorEmailAgain=document.getElementById("errorEmailAgain")
+            if(emailAgain.trim()==""){
+                errorEmailAgain.innerHTML="Email Bắt Buộc Nhập"
+                return false
+            }
+            if(email!=emailAgain){
+                errorEmailAgain.innerHTML="Email không trùng khớp"
+                return false
+            }
+            errorEmailAgain.innerHTML=""
+            return true
+        }
+        function ktPass(){
+            let pass=document.getElementById("txtPass").value
+            let errorPass=document.getElementById("errorPass")
+            let pattern=/^[A-Za-z0-9(!@#$%^&*)_]{6,20}$/
+
+            if(pass.trim()==""){
+                errorPass.innerHTML="Password bắt buộc nhập"
+                return false
+            }
+            if(!pattern.test(pass)){
+                errorPass.innerHTML="Password gồm 6-20 kí tự"
+                return false
+            }
+            errorPass.innerHTML=""
+            return true
+        }
+        function ktNamSinh(){
+            let ns=document.getElementById("txtNamSinh").value
+            let errorNamSinh=document.getElementById("errorNamSinh")
+            let pattern=/^\d+$/
+            if(ns.trim()==""){
+                errorNamSinh.innerHTML="Năm Sinh Bắt Buộc Nhập"
+                return false
+            }
+            if(!pattern.test(ns)){
+                errorNamSinh.innerHTML="Vui Lòng Nhập Đúng Định Dạng"
+                return false
+            }
+            if(eval(ns)>= 2002){
+                errorNamSinh.innerHTML="Năm Sinh Phải < 2002"
+                return false
+            }
+            errorNamSinh.innerHTML=""
+            return true
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1 class="header__title">facebook</h1>
+        <div class="header__login-username">
+            <label for="">Email hoặc điện thoại</label> <br>
+            <input type="text"> <br>
+            <input class="checkbox" type="checkbox"> <span>Duy trì đăng nhập</span> 
+        </div>
+        <div class="header__login-password">
+            <label for="">Mật khẩu</label> <br>
+            <input type="password"> <br>
+            <a href="#">Quên mật khẩu?</a>
+        </div>
+        <div class="header__login-submit">
+            <br>
+            <input type="submit" value="Đăng nhập">
+            <br>
+        </div>
+    </div>
+    <div class="center">
+        <div class="center__img">
+            <img src="./img/Screenshot 2022-04-12 221957.png" alt="">
+            <h1>&nbsp;Cảm ơn bạn <br> đã ghé thăm! </h1>
+            <h4>&nbsp;Chúng tôi mong sớm gặp lại bạn.</h4>
+        </div>
+        <div class="center__form">
+            <form action="form">
+                <h2 class="row1">Đăng ký</h2> <br>
+                <h4 class="row2">Miễn phí và sẽ luôn như vậy.</h4> <br>
+                
+                <input class="row3" type="text" id="txtHo" placeholder="Họ" required onblur="ktHo()">
+                <input class="row4" type="text" id="txtName" placeholder="Tên" required onblur="ktTen()"> 
+                <span id="errorName" ></span><br>
+                <input class="row5" type="email" id="txtEmail" placeholder="Email đăng nhập" required onblur="ktEmail()">
+                <span id="errorEmail"></span> <br>
+                <input class="row6" type="email" id="txtEmailAgain" placeholder="Nhập lại Email" required onblur="ktEmailAgain()"> 
+                <span id="errorEmailAgain"></span><br>
+                <input class="row7" type="password" id="txtPass" placeholder="Mật khẩu" required onblur="ktPass()">
+                <span id="errorPass"></span><br>
+                <input class="row8" type="number" id="txtNamSinh" placeholder="Năm sinh" required onblur="ktNamSinh()">
+                <span id="errorNamSinh"></span><br>
+                <input class="row9" type="Submit" value="Đăng ký"><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

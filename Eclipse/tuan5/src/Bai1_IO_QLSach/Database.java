@@ -1,4 +1,4 @@
-package database;
+package Bai1_IO_QLSach;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,18 +7,17 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
-import entity.Sach;
-
 
 public class Database {
-	private static final String FILENAME = "D:\\DuLieu.txt";
+	private static final String FILENAME = "data/DuLieu.txt";
 
 	/**
 	 * Ghi danh sach các cuốn sách xuống File (duLieu.txt)
 	 * @param dsSach
 	 */
+
 	public static void ghiXuongFile(ArrayList<Sach> dsSach) {
-		BufferedWriter bw;
+		BufferedWriter bw ;
 		try{
 			bw = new BufferedWriter(new FileWriter(FILENAME));
 			//Ghi dòng tiêu đề cột

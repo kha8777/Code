@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+        Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+        Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.
+        Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.
+        </p>
+    <button onclick="set_background()">tạo màu nền</button>
+    <script>
+        function set_background(){
+            docBody = document.getElementsByTagName("body")[0];
+            myBodyElement = docBody.getElementsByTagName('p');
+            myp1 = myBodyElement[0];
+            myp1.style.background="rgb(255,255,0)";
+            myp2 = myBodyElement[1];
+            myp2.style.background="rgb(255,255,255)";
+        }
+    </script>
+</body>
+</html>

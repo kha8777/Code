@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text" value="">
+    <input type="button" value="check" onclick="check()">
+
+    <script>
+        function check() {
+            var ip = document.getElementById('input').value;
+            var fc = ip.charAt(0);
+            if (fc == fc.toUpperCase()) {
+                alert('Ky tu dau la ky tu hoa');
+            } else {
+                alert('Ky tu dau khong phai la ky tu hoa');
+            }
+        }
+    </script>
+</body>
+</html>

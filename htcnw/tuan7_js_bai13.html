@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text" value="">
+    <input type="button" value="check" onclick="check()">
+
+    <script>
+        function check() {
+            var ip = document.getElementById('input').value;
+            var myExp = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
+            if (myExp.test(ip)) {
+                alert('Hop le');
+            } else {
+                alert('định dạng của credit card: 9999-9999-9999-9999');
+            }
+        }
+    </script>
+</body>
+</html>

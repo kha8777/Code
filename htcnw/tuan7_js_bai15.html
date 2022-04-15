@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inputIP" type="text" placeholder="IP">
+    <input type="button" value="check ip" onclick="checkIP()">
+    <br>
+    <br>
+    <input id="inputURL" type="text" placeholder="URL">
+    <input type="button" value="check url" onclick="checkURL()">
+    <br>
+    <br>
+    <input id="inputZIP" type="text" placeholder="IP">
+    <input type="button" value="check zip code" onclick="checkZIP()">
+    
+    <script>
+        function checkIP() {
+            var ip = document.getElementById('inputIP').value;
+            var expIP = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+            if (expIP.test(ip)) {
+                alert('IP hop le');
+            } else {
+                alert('IP khong dung dinh dang');
+            }
+        }
+
+        function checkURL() {
+            var url = document.getElementById('inputURL').value;
+            var expURL = /^(https:\/\/|http:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]+\.[a-z]+[-a-zA-Z0-9@:%_\+.~#?&//=]*$/;
+            if (expURL.exec(url)) {
+                alert('URL hop le');
+            } else {
+                alert('URL khong dung dinh dang');
+            }
+        }
+
+        function checkZIP() {
+            var zip = document.getElementById('inputZIP').value;
+            var expZIP = /^[0-9]{5}$/;
+            if (expZIP.test(zip)) {
+                alert('Ma zip hop le');
+            } else {
+                alert('Ma zip phai co 5 chu so');
+            }
+        }
+    </script>
+</body>
+</html>
