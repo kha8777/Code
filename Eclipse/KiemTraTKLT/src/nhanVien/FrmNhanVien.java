@@ -92,7 +92,7 @@ public class FrmNhanVien extends JFrame implements ActionListener {
 
 		// Phần South
 		JScrollPane scroll;
-		String[] headers = "Mã nhân viên;Họ tên;Tuổi;Địa chỉ;Email".split(";");
+		String[] headers = "Mã nhân viên;Họ tên;Địa chỉ;Tuổi;Email".split(";");
 
 		tableModel = new DefaultTableModel(headers, 0);
 		add(scroll = new JScrollPane(table = new JTable(tableModel), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
@@ -169,7 +169,7 @@ public class FrmNhanVien extends JFrame implements ActionListener {
 		}
 		
 		if (diachi.length() > 0) {
-			if (!diachi.matches("[(?=[,/.])\\w+\\sÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰYÝỲỶỸỴĐáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ]+")) {
+			if (!diachi.matches("[(?=[,./])\\w+\\sÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰYÝỲỶỸỴĐáàảãạâấầẩẫậăắằẳẵặéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ]+")) {
 				JOptionPane.showMessageDialog(this, "Địa chỉ không được chứa ký tự đặc biệt");
 				return false;
 			}
