@@ -58,9 +58,9 @@ public class ManageProduct {
 			Element sNode = (Element) pNode.getElementsByTagName("supplier").item(0);
 			String supplierName = sNode.getElementsByTagName("name").item(0).getTextContent();
 			String country = sNode.getElementsByTagName("country").item(0).getTextContent();
-			String website = sNode.getElementsByTagName("website").item(0).getTextContent();
+//			String website = sNode.getElementsByTagName("website").item(0).getTextContent();
 			
-			Supplier supplier = new Supplier(supplierName, country, website);
+			Supplier supplier = new Supplier(supplierName, country, "website");
 			
 			String sPrice = pNode.getElementsByTagName("price").item(0).getTextContent();
 			double price = 0.0;

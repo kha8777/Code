@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai12</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp"></script>
+    <style>
+        .text-grey {
+            color: rgb(230, 230, 230);
+        }
+
+        .text-black {
+            color: #111;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" id="tab-javascript" data-toggle="tab" href="#content-javascript" role="tab" aria-controls="content-javascript" aria-selected="false">JavaScript</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">CSS<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="#">CSS 1</a></li>
+                <li class="dropdown-item"><a href="#">CSS 2</a></li>
+                <li class="dropdown-item"><a href="#">CSS 3</a></li>
+            </ul>                
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" id="tab-bootstrap" data-toggle="tab" href="#content-bootstrap"role="tab" aria-controls="content-bootstrap" aria-selected="true">Bootstrap</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" id="content-javascript" role="tabpanel" aria-labelledby="tab-javascript">JavaScript is a cross-platform, object-oriented scripting language...</div>
+        <div class="tab-pane fade" id="content-css" role="tabpanel" aria-labelledby="tab-css">CSS stands for Cascading Style Sheets...</div>
+        <div class="tab-pane fade show active" id="content-bootstrap" role="tabpanel" aria-labelledby="tab-bootstrap">Bootstrap is a free front-end framework for faster and easier web development...</div>
+    </div>
+</body>
+</html>

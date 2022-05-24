@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <table id="table" border="1px solid #333" style="width: 600px">
+        <tr>
+            <th>STT</th>
+            <th>Hình ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><img src="./img/bohoa1.jpg" alt=""></td>
+            <td id="gia1">20000</td>
+            <td><input id="hoa1" type="number" value="0" onchange="updateTotal()"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="./img/bohoa2.jpg" alt=""></td>
+            <td id="gia2">30000</td>
+            <td><input id="hoa2" type="number" value="0" onchange="updateTotal()"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src="./img/bohoa3.jpg" alt=""></td>
+            <td id="gia3">40000</td>
+            <td><input id="hoa3" type="number" value="0" onchange="updateTotal()"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><img src="./img/bohoa4.jpg" alt=""></td>
+            <td id="gia4">50000</td>
+            <td><input id="hoa4" type="number" value="0" onchange="updateTotal()"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><img src="./img/bohoa5.jpg" alt=""></td>
+            <td id="gia5">30000</td>
+            <td><input id="hoa5" type="number" value="0" onchange="updateTotal()"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Tổng thành tiền</td>
+            <td id="total"></td>
+        </tr>
+    </table>
+    <script>
+        function updateTotal() {
+            var total = document.getElementById('total');
+            var hoa1 = document.getElementById('hoa1').value;
+            var hoa2 = document.getElementById('hoa2').value;
+            var hoa3 = document.getElementById('hoa3').value;
+            var hoa4 = document.getElementById('hoa4').value;
+            var hoa5 = document.getElementById('hoa5').value;
+            var gia1 = document.getElementById('gia1').innerHTML;
+            var gia2 = document.getElementById('gia2').innerHTML;
+            var gia3 = document.getElementById('gia3').innerHTML;
+            var gia4 = document.getElementById('gia4').innerHTML;
+            var gia5 = document.getElementById('gia5').innerHTML;
+            total.innerHTML = eval(hoa1*gia1 + hoa2*gia2 + hoa3*gia3 + hoa4*gia4 + hoa5*gia5);
+        }
+
+    </script>
+</body>
+</html>

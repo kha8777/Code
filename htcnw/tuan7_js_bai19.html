@@ -15,16 +15,20 @@
         <tr>
             <td>Lớp:</td>
             <td>
-                <select name="" id="">
-                    <option id="lop" value="Đại học kỹ thuật phần mềm 9A">Đại học kỹ thuật phần mềm 9A</option>
+                <select name="" id="clsOpt">
+                    <option value="Đại học kỹ thuật phần mềm 9A">Đại học kỹ thuật phần mềm 9A</option>
+                    <option value="Đại học kỹ thuật phần mềm 9B">Đại học kỹ thuật phần mềm 9B</option>
+                    <option value="Đại học kỹ thuật phần mềm 9C">Đại học kỹ thuật phần mềm 9C</option>
                 </select>    
             </td>
         </tr>
         <tr>
             <td>Môn học:</td>
             <td>
-                <select name="" id="">
-                    <option id="mon" value="Lập trình hướng đối tượng">Lập trình hướng đối tượng</option>
+                <select name="" id="subjectOpt">
+                    <option value="Lập trình hướng đối tượng">Lập trình hướng đối tượng</option>
+                    <option value="Lập trình hướng sự kiện">Lập trình hướng sự kiện</option>
+                    <option value="Lập trình phân tán">Lập trình phân tán</option>
                 </select>        
             </td>
         </tr>
@@ -76,28 +80,31 @@
             return true;
         }
 
-        function them(){
+        function them() {
             var table = document.getElementById("table");
-            var row = table.insertRow(1);
+            var row = table.insertRow(-1);
             var cell1 = row.insertCell(0);
             var cell2 = row.insertCell(1);
             var cell3 = row.insertCell(2);
             var cell4 = row.insertCell(3);
             var name = document.getElementById('name').value;
-            var lop = document.getElementById('lop').value;
-            var mon = document.getElementById('mon').value;
+            var lop = document.getElementById('clsOpt');
+            var mon = document.getElementById('subjectOpt');
+            var cls = lop.options[lop.selectedIndex].text;
+            var subj = mon.options[mon.selectedIndex].text;
             var loai = "";
             var checkbox = document.getElementsByName("loai");
             for (var i = 0; i < checkbox.length; i++){
-                if (checkbox[i].checked === true){
+                if (checkbox[i].checked === true) {
                     loai = checkbox[i].value;
                 }
             }
             cell1.innerHTML = name;
-            cell2.innerHTML = lop;
-            cell3.innerHTML = mon;
+            cell2.innerHTML = cls;
+            cell3.innerHTML = subj;
             cell4.innerHTML = loai;
         }
+
     </script>
 </body>
 </html>

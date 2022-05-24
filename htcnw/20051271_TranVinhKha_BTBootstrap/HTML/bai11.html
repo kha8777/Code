@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai11</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/icons/bootstrap_icons_glyphicons.asp"></script>
+    <style>
+        .text-grey {
+            color: rgb(230, 230, 230);
+        }
+
+        .text-black {
+            color: #000;
+        }
+
+        .text-pink {
+            color: palevioletred;
+        }
+
+        .bg-main {
+            background-color: var(--primary-color);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        :root {
+            --primary-color: #ababab;
+        }
+
+        .main {
+            color: #666;
+            width: calc(100% - 20px);
+        }
+
+        .wrap {
+            display: flex;
+            padding-top: 20px;
+        }
+
+        .text-wrap {
+            padding: 20px;
+        }
+
+        .recipe {
+            padding: 8px 0 8px 8px;
+            margin: 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .recipe-title {
+            padding: 40px 0 0;
+        }
+
+        .contact-text {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin: 20px 0 0;
+        }
+
+        .footer-text {
+            font-size: 11px;
+            height: 36px;
+            line-height: 36px;
+            margin: 0 0 0 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="../IMG/brand.png" alt="">
+        <nav class="navbar navbar-expand-sm bg-main">
+            <ul class="navbar-nav" style="height: 12px; align-items: center;">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="#">home</a> 
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link text-grey" href="#">classes</a> 
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link text-grey" href="#">catering</a> 
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link text-grey" href="#">about</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link text-grey" href="#">contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    
+    <div class="main">
+        <div class="row">
+            <div class="col-sm-8" style="padding-left: 36px; border-right: 1px solid #eee;">
+                <div class="wrap">
+                    <div class="img-thumbnail">
+                        <img src="../IMG/monan1.jpg" alt="" class="" style="width: 350px; height: 200px;">
+                        <p>Bok Choi</p>
+                    </div>
+                    <div class="text-wrap">
+                        <h4>Japanese Vegetarian</h4>
+                        <p class="text-pink">Five week course in London</p>
+                        <p>A five week introduction to traditional Japanese vegetarian meals, teaching you of rice and noodle dishes.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="wrap">
+                    <div class="img-thumbnail">
+                        <img src="../IMG/monan2.jpg" alt="" class="" style="width: 350px; height: 200px;">
+                        <p>Teriyaki Sauce</p>
+                    </div>
+                    <div class="text-wrap">
+                        <h4>Sauces Masterclass</h4>
+                        <p class="text-pink">One day workshop</p>
+                        <p>An intensive one-day course looking how to create the most delicious sauces for use in range of Japanese cookery.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+                
+            <div class="col-sm-4">
+                <h4 class="recipe-title text-pink">Popular Recipes</h4>
+                <p class="text-pink recipe">Yakitori (grilled chicken)</p>
+                <p class="text-pink recipe">Tsukune (minced chicken patties)</p>
+                <p class="text-pink recipe">Okonomiyaki (savory pancakes)</p>
+                <p class="text-pink recipe">Mizutaki (chicken stew)</p>
+
+                <h4 class="recipe-title text-pink">Contact</h4>
+                <p class="contact-text">
+                    Yoko's Kitchen 
+                    27 Redchurch Street Shoreditch 
+                    London E₂₇DP
+                </p>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer bg-main">
+        <p class="footer-text text-white">© 2011 Yoko's Kitchen</p>
+    </div>
+
+</body>
+</html>

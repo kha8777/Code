@@ -117,6 +117,9 @@ public class Application extends JFrame implements ActionListener {
 			updateTable();
 			
 		}
+		if (e.getSource().equals(btnSave)) {
+			ls.writeXMLFile();
+		}
 	}
 	
 }
